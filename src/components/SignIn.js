@@ -64,7 +64,7 @@ export default function SignIn({name,setName}) {
           />
           <Button
             disabled={!name}
-            type="submit"
+            type="button"
             fullWidth
             variant="contained"
             color="primary"
