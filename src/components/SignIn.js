@@ -39,8 +39,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SignIn() {
+export default function SignIn({name,setName}) {
   const classes = useStyles();
+  
 
   return (
     <Container component="main" maxWidth="xs">
@@ -58,10 +59,11 @@ export default function SignIn() {
             id="name"
             label="ニックネーム"
             name="name"
+            onChange={(event)=>setName(event.target.value)}
             autoFocus
           />
           <Button
-            disabled={false}
+            disabled={!name}
             type="submit"
             fullWidth
             variant="contained"
